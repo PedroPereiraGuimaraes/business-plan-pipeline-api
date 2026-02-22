@@ -3,16 +3,19 @@
 {% block title %}Consultoria Confirmada{% endblock %}
 
 {% block content %}
-<h2 style="color: #111827; margin-top: 0; font-size: 22px;">Consultoria Agendada Confirmada</h2>
-<div style="font-size: 16px;">
-    <p>Sua solicitação de consultoria sobre <strong>'{{ objective }}'</strong> foi confirmada com sucesso.</p>
-    <p>Prepare suas dúvidas e acesse o link abaixo no horário agendado.</p>
+<h2 style="color:#1c274c;margin-top:0;font-size:24px;font-weight:700;">
+    Consultoria Confirmada
+</h2>
+
+<div style="font-size:16px;color:#475569;">
+    <p>Sessão sobre <strong>'{{ objective }}'</strong> confirmada.</p>
+    <p>Acesse no horário pelo link abaixo:</p>
 </div>
 
-<div style="text-align: center; margin-top: 30px; margin-bottom: 20px;">
+<div style="text-align:center;margin:30px 0;">
     <a href="{{ meeting_link }}"
-        style="background-color: #4F46E5; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; font-family: sans-serif; display: inline-block;">
-        Acessar Reunião (Meet)
+        style="background:#5c8356;color:#fff;padding:14px 30px;text-decoration:none;border-radius:8px;font-weight:600;font-size:15px;">
+        Entrar na Reunião
     </a>
 </div>
 {% endblock %}

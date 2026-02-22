@@ -1,27 +1,66 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Business Plan Pipeline{% endblock %}</title>
 </head>
-<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f4f4f5;">
-    <div style="max-width: 600px; margin: 40px auto; background-color: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-        <!-- Header -->
-        <div style="background-color: #18181B; padding: 25px; text-align: center;">
-            <h1 style="color: white; margin: 0; font-size: 20px; letter-spacing: 1px;">BUSINESS PLAN PIPELINE</h1>
-        </div>
-        <!-- Content -->
-        <div style="padding: 40px; color: #374151; line-height: 1.6;">
-            {% block content %}{% endblock %}
-            
-            <p style="margin-top: 30px; font-size: 14px; color: #6B7280;">
-                Se você não solicitou este e-mail, por favor ignore-o.
-            </p>
-        </div>
-        <!-- Footer -->
-        <div style="background-color: #F9FAFB; padding: 20px; text-align: center; border-top: 1px solid #E5E7EB; font-size: 12px; color: #9CA3AF;">
-            &copy; 2026 Business Plan Pipeline. Todos os direitos reservados.
-        </div>
-    </div>
+
+<body
+    style="font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f5f7f9; color: #1c274c;">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"
+        style="background-color: #f5f7f9;">
+        <tr>
+            <td align="center" style="padding: 40px 10px;">
+                <div
+                    style="max-width: 600px; width: 100%; background-color: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05); border: 1px solid #e2e8f0;">
+
+                    <!-- Brand Identity Header -->
+                    <div style="padding: 40px 40px 30px; text-align: center;">
+                        <h1
+                            style="color: #5c8356; margin: 0; font-size: 20px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase;">
+                            Business Plan Pipeline
+                        </h1>
+                    </div>
+
+                    <!-- Main Content Section -->
+                    <div style="padding: 0 40px 40px; line-height: 1.6; color: #1c274c;">
+                        {% block content %}{% endblock %}
+                    </div>
+
+                    <!-- Divider -->
+                    <div style="padding: 0 40px;">
+                        <div style="border-top: 1px solid #f1f5f9;"></div>
+                    </div>
+
+                    <!-- Footer -->
+                    <div style="padding: 30px 40px; text-align: center;">
+                        <p
+                            style="margin: 0; font-size: 11px; color: #94a3b8; letter-spacing: 1px; text-transform: uppercase; font-weight: 600;">
+                            Business Plan Pipeline
+                        </p>
+                        <p style="margin: 10px 0 0; font-size: 11px; color: #cbd5e1;">
+                            &copy; 2026. Todos os direitos reservados.
+                        </p>
+                        <div style="margin-top: 15px; font-size: 11px;">
+                            <a href="#" style="color: #5c8356; text-decoration: none; margin: 0 8px;">Privacidade</a>
+                            <span style="color: #e2e8f0;">&bull;</span>
+                            <a href="#" style="color: #5c8356; text-decoration: none; margin: 0 8px;">Suporte</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Email Disclaimer -->
+                <div style="max-width: 600px; padding: 25px 20px; text-align: center;">
+                    <p style="font-size: 11px; color: #94a3b8; line-height: 1.5; margin: 0;">
+                        Você recebeu este e-mail por ser usuário da plataforma Business Plan Pipeline.<br>
+                        Se este e-mail foi enviado por engano, por favor desconsidere.
+                    </p>
+                </div>
+            </td>
+        </tr>
+    </table>
 </body>
+
 </html>
