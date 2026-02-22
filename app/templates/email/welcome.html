@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Bem-vindo(a)!{% endblock %}
+
+{% block content %}
+<h2 style="color: #111827; margin-top: 0; font-size: 22px;">Bem-vindo(a) ao Business Plan Pipeline!</h2>
+<div style="font-size: 16px;">
+    <p>Olá <strong>{{ user_name }}</strong>!</p>
+    <p>Seja muito bem-vindo à nossa plataforma. Estamos felizes em tê-lo conosco.</p>
+    <p>Comece criando seu primeiro projeto agora mesmo e transforme suas ideias em planos concretos.</p>
+</div>
+
+<div style="text-align: center; margin-top: 30px; margin-bottom: 20px;">
+    <a href="http://app.businessplanpipeline.com/projects/new"
+        style="background-color: #4F46E5; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; font-family: sans-serif; display: inline-block;">
+        Criar Projeto
+    </a>
+</div>
+{% endblock %}

@@ -1,0 +1,46 @@
+# Ambientes virtuais
+venv/
+env/
+.venv/
+env.bak/
+venv.bak/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Pycache / Compilados
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs
+logs/
+*.log
+
+# Caches e artefatos de build
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.egg-info/
+
+# Relacionado ao SO
+.DS_Store
+Thumbs.db
+
+# VS Code / IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Banco de dados local SQLite (se houver)
+*.sqlite3
+*.db
+
+# Outros
+plan.md

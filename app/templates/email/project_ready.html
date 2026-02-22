@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}Seu Plano está Pronto!{% endblock %}
+
+{% block content %}
+<h2 style="color: #111827; margin-top: 0; font-size: 22px;">Plano de Negócios Finalizado</h2>
+<div style="font-size: 16px;">
+    <p>Boas notícias! A IA finalizou a geração do plano de negócios para o projeto <strong>'{{ project_name
+            }}'</strong>.</p>
+    <p>Acesse agora para visualizar e editar o resultado.</p>
+</div>
+
+<div style="text-align: center; margin-top: 30px; margin-bottom: 20px;">
+    <a href="{{ plan_link }}"
+        style="background-color: #4F46E5; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; font-family: sans-serif; display: inline-block;">
+        Ver Plano de Negócios
+    </a>
+</div>
+{% endblock %}

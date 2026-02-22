@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Consultoria Confirmada{% endblock %}
+
+{% block content %}
+<h2 style="color: #111827; margin-top: 0; font-size: 22px;">Consultoria Agendada Confirmada</h2>
+<div style="font-size: 16px;">
+    <p>Sua solicitação de consultoria sobre <strong>'{{ objective }}'</strong> foi confirmada com sucesso.</p>
+    <p>Prepare suas dúvidas e acesse o link abaixo no horário agendado.</p>
+</div>
+
+<div style="text-align: center; margin-top: 30px; margin-bottom: 20px;">
+    <a href="{{ meeting_link }}"
+        style="background-color: #4F46E5; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; font-family: sans-serif; display: inline-block;">
+        Acessar Reunião (Meet)
+    </a>
+</div>
+{% endblock %}
