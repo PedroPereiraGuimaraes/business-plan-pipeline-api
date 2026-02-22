@@ -1,9 +1,23 @@
 from sqlalchemy.orm import Session
 from fastapi import HTTPException, status
-from app.models import Project, ProjectStatus
+from app.models import Project, ProjectStatus, OnboardingAnswer
 from app.schemas.projects import ProjectCreate, ProjectUpdate
 from app.dependencies import EntityNotFoundException
 from uuid import UUID
+
+# Fixed onboarding questions — must stay in sync with the frontend constant
+ONBOARDING_QUESTIONS = [
+    "problem",
+    "proposed_solution",
+    "product_stage",
+    "value_proposition",
+    "competitive_advantage",
+    "team_structure",
+    "key_roles",
+    "location",
+    "available_capital",
+    "cost_structure",
+]
 
 class ProjectService:
     def create_project(self, db: Session, project: ProjectCreate, user_id: UUID):
@@ -26,6 +40,16 @@ class ProjectService:
             user_id=user_id
         )
         db.add(db_project)
+        db.flush()  # Get project ID before commit
+
+        # Pre-populate the 10 fixed onboarding answers with empty strings
+        for question_label in ONBOARDING_QUESTIONS:
+            db.add(OnboardingAnswer(
+                project_id=db_project.id,
+                question=question_label,
+                answer=""
+            ))
+
         db.commit()
         db.refresh(db_project)
         return db_project

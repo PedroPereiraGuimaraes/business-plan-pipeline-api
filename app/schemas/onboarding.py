@@ -5,6 +5,9 @@ class OnboardingAnswerCreate(BaseModel):
     question: str
     answer: str
 
+class OnboardingAnswerUpdate(BaseModel):
+    answer: str
+
 class OnboardingAnswerResponse(OnboardingAnswerCreate):
     id: UUID4
     project_id: UUID4
