@@ -19,7 +19,7 @@ class Settings(BaseSettings):
     GEMINI_API_KEY: str | None = None
     
     # CORS
-    BACKEND_CORS_ORIGINS: List[str] = ["http://localhost", "http://localhost:3000"]
+    BACKEND_CORS_ORIGINS: List[str] = ["http://localhost", "http://localhost:3000", "https://business-plan-pipeline-web.vercel.app"]
 
     # Email
     MAIL_USERNAME: str
